@@ -1,0 +1,150 @@
+version: "3.1"
+
+nlu:
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: luminar
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hey luminar
+
+- intent: ask_courses
+  examples:  |
+    - What courses do you offer?
+    - Tell me about your courses
+    - I want to know about the courses available
+    - courses
+    - What training programs are available?
+    - Can you list your courses?
+
+- intent: ask_admission
+  examples:  |
+    - How can i apply for admission?
+    - Tell me about the admission process
+    - What are the admission requirements?
+
+- intent: ask_faculty
+  examples:  |
+    - About faculty?
+    - Who all are the faculties in luminar?
+    - Teaching Staffs
+
+- intent: ask_fees
+  examples:  |
+    - What are the fees for the courses?
+    - Fee Structure
+
+- intent: enquire_institute
+  examples: |
+    - Tell me about your institute
+    - What is Luminar Technolab?
+    - Can you give me some details about your institute?
+    - Information about Luminar Technolab?
+
+- intent: location
+  examples: |
+    - Where are you located?
+    - What is your address?
+    - Location of your institute?
+    - Where can I find Luminar Technolab?
+
+- intent: contact
+  examples: |
+    - How can I contact you?
+    - What is your contact number?
+    - Provide your contact details
+
+- intent: enquire_course_details
+  examples: |
+    - Tell me more about [Python Data Science](course)
+    - What is included in the [Java Spring Full Stack Development]course?
+    - Details about the [Asp.net MVC with Angular]course?
+    - Can you provide information on [Best Flutter Training] course?
+    - Python Django - React - Full Stack Web Development course details?
+    - MEA(R)N Stack Web Development Expert - Angular & React course details?
+    - Power BI course deatils?
