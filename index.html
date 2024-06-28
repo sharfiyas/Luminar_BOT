@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasa Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById('userInput').value;
+
+            if (userInput.trim() === "") return; // Prevent empty messages
+
+            let chatBox = document.getElementById('chatBox');
+            chatBox.innerHTML += '<div class="message user"><div class="content"><span class="material-symbols-outlined">face</span> : ' + userInput + '</div></div>';
+            document.getElementById('userInput').value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                chatBox.innerHTML += '<div class="message bot"><div class="content"><span class="material-symbols-outlined">smart_toy</span> ' + data.message + '</div></div>';
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>LUMINAR TECHNOLAB</header>
+    <div> 
+        
+    </div>
+    <div id="chatBox"></div>
+    <div class="inputContainer">
+        <input type="text" id="userInput" placeholder="Type a message">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</body>
+</html>
